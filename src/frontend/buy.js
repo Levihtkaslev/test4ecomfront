@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import * as XLSX from "xlsx";
-import Datepicker from "react-tailwindcss-datepicker";
+/* import Datepicker from "react-tailwindcss-datepicker"; */
 import { toast } from "react-toastify";
 import { Button, Modal } from "flowbite-react";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
@@ -19,13 +19,13 @@ const Buy = () => {
     const[box, setbox] = useState(false);
     const[status, setstatus] = useState("");
     const[disable, setdisable] = useState('');
-    const[value, setValue] = useState({startDate: null,endDate: null});
+  /*   const[value, setValue] = useState({startDate: null,endDate: null}); */
     const[deleteid, setdeleteid] = useState('');
     const[showmodel, setshowmodel] = useState(false);
-    const [dateRange, setDateRange] = useState({
+   /*  const [dateRange, setDateRange] = useState({
         startDate: null,
         endDate: null,
-    });
+    }); */
 
     const [currentPage, setCurrentPage] = useState(1);
     const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -66,22 +66,21 @@ const Buy = () => {
             const stsfill = sts === "" || res.itemstatus === sts;
             const searchfill = buysearch === "" || res.personname.toLowerCase().includes(buysearch.toLowerCase())
                                                 || res.personnumber.toLowerCase().includes(buysearch.toLowerCase())
-            const formDate = new Date(res.createdAt).setHours(0, 0, 0, 0);
+            /* const formDate = new Date(res.createdAt).setHours(0, 0, 0, 0);
             const startDateOnly = start ? new Date(start).setHours(0, 0, 0, 0) : null;
             const endDateOnly = end ? new Date(end).setHours(0, 0, 0, 0) : null;
-            const datefill = (!start || formDate >= startDateOnly) && (!end || formDate <= endDateOnly);
-            return(searchfill && assigneefill && catfill && stsfill && datefill)
+            const datefill = (!start || formDate >= startDateOnly) && (!end || formDate <= endDateOnly); */
+            return(searchfill && assigneefill && catfill && stsfill /* && datefill */)
         })
 
-        const sortedData = filter.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
-        setbuylist(sortedData);
-        console.log(sortedData); 
+        /* const sortedData = filter.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)); */
+        setbuylist(filter.reverse());
     }
 
-    const handleDateChange = (newValue) => {
+   /*  const handleDateChange = (newValue) => {
         setDateRange(newValue);
         getbuylist(newValue.startDate, newValue.endDate);
-    };
+    }; */
 
     const deletebuy = async (id) => {
         await fetch(`${backendbaseurl}/buy/${id}`,{
@@ -99,9 +98,9 @@ const Buy = () => {
         }));
       };
 
-    const formatDate = (dateString) => {
+    /* const formatDate = (dateString) => {
         return new Date(dateString).toLocaleString('en-GB');
-    };
+    }; */
 
     const sttatus = async(_id, currentstatus) => {
         
@@ -195,12 +194,12 @@ const Buy = () => {
             <div className= " header">
                 <h3 class="text-white text-3xl ">Request</h3>
                 <div className="w-1/6 ">
-                    <Datepicker 
+                    {/* <Datepicker 
                             value={dateRange} 
                             onChange={handleDateChange}
                             showShortcuts={true}
                             inputClassName="rounded p-2 w-full text-gray  bg-white focus:outline-none px-3"
-                        /> 
+                        /> */} 
                 </div>
             </div>
 
@@ -298,7 +297,7 @@ const Buy = () => {
                         currentRows.map((buy, index) => (
                             <tr className={`py-14 h-20  ${index % 2 === 0 ? 'bg-white': 'bg-gray-100'} hover:bg-gray-200 `} key={buy._id}>
                                 <td className="tableheadcol">{index+1}</td>
-                                <td className="tableheadcol">{formatDate(buy.createdAt)}</td>
+                                <td className="tableheadcol">{buy.createdAt}</td>
                                 <td className="tableheadcol">{buy.personname}</td>
                                 <td className="tableheadcol">{buy.itemname}</td>
                                 <td className="tableheadcol">{buy.itemqty}</td>
