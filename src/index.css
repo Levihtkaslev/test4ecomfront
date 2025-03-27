@@ -17,15 +17,16 @@ body {
 }
 
 .secheader{
-  @apply my-12 border border-pink-100 p-10 rounded-md bg-fuchsia-50 flex justify-between mb-28
+  @apply my-12 border border-pink-100 p-10 rounded-md bg-fuchsia-50 flex flex-col items-center gap-10 justify-between mb-28
 }
 
-.searchout{
-  @apply flex items-center border-2 border-gray-200 bg-white rounded-lg w-96 hover:border-cyan-700 transition duration-300
+.searchout {
+  @apply w-full flex items-center border-2 border-gray-200 bg-white rounded-lg hover:border-cyan-700 transition duration-300;
 }
+
 
 .searchinner{
-  @apply w-full p-2 bg-transparent outline-none text-gray-800 placeholder-gray-500 
+  @apply w-full p-2 bg-transparent outline-none text-gray-800 placeholder-gray-500;
 }
 
 .table1{

@@ -79,7 +79,7 @@ function Dashboard() {
             src="https://media-hosting.imagekit.io//53bca07c48d24d25/otlogo1.png?Expires=1835261649&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=x2gAL7THwE4EIddoFjelsrhP88dN6f1oHJk8ohDj-dJEkz-SIjJACdhOBpd6e0cpxSXKltE3d7tUhzqIBmZF3iJVHd0o2vdLQdeiZvNzDbZhltqmXVbEnKU-WvbCmyGmHVbTOGZzbNzqWdq545vUyJjH9fSVh~s14wfK8pR0L-KqrG-FawvRZ51iCQxvP0aLRRa0vM38oc0lq0KcvrRs8T19ygcc5yYGkX5SQVsgSS5boVtsgCPUL1lEAr22v04ODCQ3APrIonfABdLACLUHoJr0AaH77kfvNeiNTn6P-yDf07EENjGiWz30-L5uMZXP5Tl193D3Fi8i9DKuPzqNcA__"
             alt="Network Image"
           />
-          <h2 className="text-xl font-bold text-center">Dashboard</h2>
+          <h2 className="text-xl font-bold text-center">OT Admin</h2>
         </div>
 
         {/* Menu items */}

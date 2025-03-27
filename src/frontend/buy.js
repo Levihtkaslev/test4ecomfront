@@ -203,7 +203,7 @@ const Buy = () => {
                 </div>
             </div>
 
-            <div className="secheader">
+            <div className="my-12 border border-pink-100 p-10 rounded-md bg-fuchsia-50 flex flex-col items-center gap-10 justify-between mb-28">
                 <div className="searchout">
                     <input 
                         className="searchinner"
@@ -229,7 +229,7 @@ const Buy = () => {
 
                 
 
-               <div className="flex w-1/2 justify-between">
+               <div className="flex w-full justify-between gap-20">
 
                 <select className="select" id="rowsPerPage" value={rowsPerPage} onChange={handleRowsPerPageChange}>
                     <option className="selectinner" value="10">10 Rows</option>

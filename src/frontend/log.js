@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from './firebase';
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify";
 
 
 const Login = () => {
@@ -14,11 +15,15 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+      try {
+        await signInWithEmailAndPassword(auth, email, password);
+      } catch (error) {
+        
+      }
       
       navigate('/dashboard');
     } catch (error) {
-      
+     
     }
   };
 

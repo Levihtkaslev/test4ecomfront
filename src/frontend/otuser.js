@@ -176,7 +176,7 @@ const Otuser = () => {
                     </svg>
                 </div>
                 
-                <div className="flex w-1/4 justify-between">
+                <div className="flex w-full justify-between gap-20">
                     <select className="select" id="rowsPerPage" value={rowsPerPage} onChange={handleRowsPerPageChange}>
                         <option className="selectinner" value="10">10 Rows</option>
                         <option className="selectinner" value="20">20 Rows</option>
