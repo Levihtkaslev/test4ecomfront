@@ -23,9 +23,13 @@ const Coreimage = () => {
 
 
     const getimage = async() => {
-        const response = await fetch(`${backendbaseurl}/ad`);
+        try {
+            const response = await fetch(`${backendbaseurl}/ad`);
         const res = await response.json();
-        setimagelist(res.reverse());  
+        setimagelist(res.reverse()); 
+        } catch (error) {
+            console.log("error", error)
+        } 
     }
 
 

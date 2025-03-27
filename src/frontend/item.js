@@ -45,12 +45,17 @@ const Items = () => {
    
 
     const getcat = async () => {
-        const response = await fetch(`${backendbaseurl}/web/category`);
+        try {
+            const response = await fetch(`${backendbaseurl}/web/category`);
         const res = await response.json();
         setcatlist(res);
+        } catch (error) {
+            console.log("error", error)
+        }
     }
     
     const getitem = async(/* itemcategory = "" */) => {
+       try {
         const response = await fetch(/* itemcategory ? `${backendbaseurl}/item/${itemcategory}` : */ `${backendbaseurl}/item`);
         const res = await response.json();
 
@@ -66,6 +71,9 @@ const Items = () => {
          } else {
             setitemlist(filterlist.reverse());  
         }
+       } catch (error) {
+        console.log("error", error)
+       }
     }
     
 

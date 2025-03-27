@@ -36,6 +36,7 @@ const Personal = () => {
     },[usesearch]);
 
     const getpersonal = async () => {
+       try {
         const response = await fetch(`${backendbaseurl}/profile`);
         const res = await response.json();
 
@@ -50,6 +51,9 @@ const Personal = () => {
             return(fil)
         })
         setpersonallist(filter.reverse());
+       } catch (error) {
+        console.log("error")
+       }
     };
 
     const creatpersonal = async () => {

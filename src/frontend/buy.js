@@ -43,23 +43,30 @@ const Buy = () => {
 
 
     const getassing = async () => {
-        const response = await fetch(`${backendbaseurl}/otuser`);
-        const res = await response.json();
-        setassign(res);
+        try {
+            const response = await fetch(`${backendbaseurl}/otuser`);
+            const res = await response.json();
+            setassign(res);
+        } catch (error) {
+            console.log("No data ", error)
+        }
     }
 
     const getcategory = async () => {
-        const categ = await fetch(`${backendbaseurl}/web/category`);
-        const categlist = await categ.json();
-        setcategory(categlist);
+        try {
+            const categ = await fetch(`${backendbaseurl}/web/category`);
+            const categlist = await categ.json();
+            setcategory(categlist);
+        } catch (error) {
+            console.log("No data ", error)
+        }
     };
 
     const getbuylist = async (start = null, end = null) => {
-        const response = await fetch(`${backendbaseurl}/buy`);
-        const res = await response.json();
-
-        
-
+        try {
+            const response = await fetch(`${backendbaseurl}/buy`);
+            const res = await response.json();
+            
         const filter = res.filter(res => {
             const assigneefill = assi === "" || res.itemassinged === assi; 
             const catfill = cat === "" || res.itemcategory === cat;
@@ -75,6 +82,13 @@ const Buy = () => {
 
         /* const sortedData = filter.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)); */
         setbuylist(filter.reverse());
+        } catch (error) {
+            console.log("No data ", error)
+        }
+        
+
+        
+
     }
 
    /*  const handleDateChange = (newValue) => {

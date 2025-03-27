@@ -21,27 +21,40 @@ const Otreport = () => {
         },[assi, cat, sts]);
 
     const getassing = async () => {
-        const response = await fetch(`${backendbaseurl}/otuser`);
+        try {
+            const response = await fetch(`${backendbaseurl}/otuser`);
         const res = await response.json();
         setassign(res);
+        } catch (error) {
+            console.log("erro")
+        }
     }
 
     const getcategory = async () => {
+       try {
         const categ = await fetch(`${backendbaseurl}/web/category`);
         const categlist = await categ.json();
         setcategory(categlist);
+       } catch (error) {
+        console.log("erro")
+       }
     };
 
     const getbuylistcopy = async () => {
-        const response = await fetch(`${backendbaseurl}/buy`);
+        try {
+            const response = await fetch(`${backendbaseurl}/buy`);
         const res = await response.json();
         setotcopy(res);
+        } catch (error) {
+            console.log("erro")
+        }
     }
 
 
 
     const getbuylist = async () => {
-        const response = await fetch(`${backendbaseurl}/buy`);
+        try {
+            const response = await fetch(`${backendbaseurl}/buy`);
         const res = await response.json();
 
         const filter = res.filter(res => {
@@ -51,6 +64,9 @@ const Otreport = () => {
             return(assigneefill && catfill && stsfill)
         })
         setotbuylist(filter);
+        } catch (error) {
+            console.log("erro")
+        }
     }
 
     const exportt = () => {

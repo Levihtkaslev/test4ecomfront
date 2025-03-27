@@ -28,6 +28,7 @@ const Category = () => {
     );
 
     const getcategory = async () => {
+       try {
         const categ = await fetch(`${backendbaseurl}/web/category`);
         const categlist = await categ.json();
 
@@ -37,6 +38,9 @@ const Category = () => {
         })
 
         setcategory(filter.reverse());
+       } catch (error) {
+        console.log("error", error)
+       }
     };
 
     const createcat = async () => {
