@@ -80,6 +80,8 @@ const Login = () => {
           <button className='bg-cyan-400 p-5 w-full rounded-3xl shadow-2xl hover:bg-teal-500 transition duration-300 text-2xl text-white mt-11 ' type="submit">Login</button>
                 
         </form>
+       <h2 className='mt-5'>Sample Username : sakthivelveld133@gmail.com</h2> 
+        <h2>Sample Password : 123456</h2>
     </div>
   );
 };
