@@ -291,7 +291,7 @@ const Buy = () => {
                     <tr className="py-14  h-16">
                         <th className="tableheadcol">S.no</th>
                         <th className="tableheadcol">Time</th>
-                        <th className="tableheadcol">Patient Name</th>
+                        <th className="tableheadcol">Cutomer Name</th>
                         <th className="tableheadcol">Item Name</th>
                         <th className="tableheadcol">Quantity</th>
                         <th className="tableheadcol">Price</th>

@@ -55,14 +55,14 @@ function Dashboard() {
 
   const menulist = [
     { name: 'Request', path: '/dashboard/buy', icon: <FaClipboardList /> },
-    { name: 'List', path: '/dashboard/items-list', icon: <IoIosCreate /> },
-    { name: 'Type', path: '/dashboard/category-list', icon: <BiSolidCategory /> },
-    { name: 'Old User Acc', path: '/dashboard/user-account', icon: <HiUserAdd /> },
-    { name: 'Customer Acc', path: '/dashboard/patient-account', icon: <FaRegIdBadge /> },
-    { name: 'Pat Info', path: '/dashboard/patient-personal', icon: <FaInfoCircle /> },
+    { name: 'Item List', path: '/dashboard/items-list', icon: <IoIosCreate /> },
+    { name: 'Category', path: '/dashboard/category-list', icon: <BiSolidCategory /> },
+    { name: 'User Account', path: '/dashboard/user-account', icon: <HiUserAdd /> },
+    { name: 'Customer Account', path: '/dashboard/patient-account', icon: <FaRegIdBadge /> },
+    { name: 'Customer Info', path: '/dashboard/patient-personal', icon: <FaInfoCircle /> },
     { name: 'Report', path: '/dashboard/report', icon: <HiDocumentReport /> },
     { name: 'Admin Account', path: '/dashboard/reg', icon: <MdAdminPanelSettings /> },
-    { name: 'Carousels', path: '/dashboard/corosel', icon: <GiKnightBanner />  },
+    { name: 'Banner Image', path: '/dashboard/corosel', icon: <GiKnightBanner />  },
   ];
 
 
@@ -74,11 +74,11 @@ function Dashboard() {
         {/* Logo and title */}
         <div className="flex items-center justify-center mb-6">
           
-          <img
+         {/*  <img
             className="h-11 w-11 ml-2"
             src="https://media-hosting.imagekit.io//53bca07c48d24d25/otlogo1.png?Expires=1835261649&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=x2gAL7THwE4EIddoFjelsrhP88dN6f1oHJk8ohDj-dJEkz-SIjJACdhOBpd6e0cpxSXKltE3d7tUhzqIBmZF3iJVHd0o2vdLQdeiZvNzDbZhltqmXVbEnKU-WvbCmyGmHVbTOGZzbNzqWdq545vUyJjH9fSVh~s14wfK8pR0L-KqrG-FawvRZ51iCQxvP0aLRRa0vM38oc0lq0KcvrRs8T19ygcc5yYGkX5SQVsgSS5boVtsgCPUL1lEAr22v04ODCQ3APrIonfABdLACLUHoJr0AaH77kfvNeiNTn6P-yDf07EENjGiWz30-L5uMZXP5Tl193D3Fi8i9DKuPzqNcA__"
             alt="Network Image"
-          />
+          /> */}
           <h2 className="text-xl font-bold text-center">OT Admin</h2>
         </div>
 
