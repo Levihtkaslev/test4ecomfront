@@ -382,21 +382,31 @@ const Buy = () => {
                             </tr>
                         ))
                     }
-                    {
+                    
+                </tbody>
+            </table>
+
+           
+         </div>
+
+          {
                         
                         box && viewcart.cartdetails && (
-                            <div>
-                                <button onClick={cancel}>Clear</button>
+                            <div className="mx-auto w-1/4 rounded-2xl shadow-xl mt-6 p-6">
+                                <div className="flex justify-between">
+                                    <p className="font-semibold text-2xl">Full Details</p>
+                                    <button className="text-red-500" onClick={cancel}>Clear</button>
+                                </div>
                                 {
                                     viewcart.cartdetails.map((address, index) => (
                                         <div key={index}>
-                                            <h3>Item name:</h3> {address.itemname}<br/>
-                                            <h3>Total price:</h3> <span>{address.itemorip}</span><br/>
-                                            <h3>Offer price:</h3> <span>{address.itemoffpr}</span><br/>
-                                            <h3>No. pieces:</h3> <span>{address.itempice}</span><br/>
-                                            <h3>Category:</h3> <span>{address.itemcategory}</span><br/>
-                                            <h3>Qty:</h3> <span>{address.qty}</span><br/>
-                                            <h3>Original Price:</h3> <span>{address.itemorip2}</span>
+                                            <h3><strong>Item name:</strong></h3> {address.itemname}<br/>
+                                            <h3><strong>Total price:</strong></h3> <span>{address.itemorip}</span><br/>
+                                            <h3><strong>Offer price:</strong></h3> <span>{address.itemoffpr}</span><br/>
+                                            <h3><strong>No. pieces:</strong></h3> <span>{address.itempice}</span><br/>
+                                            <h3><strong>Category:</strong></h3> <span>{address.itemcategory}</span><br/>
+                                            <h3><strong>Qty:</strong></h3> <span>{address.qty}</span><br/>
+                                            <h3><strong>Original Price:</strong></h3> <span>{address.itemorip2}</span>
                                         </div>
                                     ))
                                 }
@@ -405,9 +415,7 @@ const Buy = () => {
                         )
                         
                     }
-                </tbody>
-            </table>
-         </div>
+
             <div className="flex flex-row items-center justify-center space-x-2 mt-4">
                 <button onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>
                     Previous
